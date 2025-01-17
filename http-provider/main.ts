@@ -1,6 +1,10 @@
 import { Web3, HttpProvider } from 'web3';
 
-let web3 = new Web3('https://mainnet.infura.io/v3/af2411a62c1f4aa8bc806874c7501c03');
+let web3 = new Web3('https://mainnet.infura.io/v3/YOUR_INFURA_ID');
+
+let block = await web3.eth.getBlockNumber();
+
+console.log(block);
 
 const httpOptions = {
 	providerOptions: {
@@ -22,8 +26,8 @@ const httpOptions = {
 	} as RequestInit
 };
 
-web3 = new Web3(new HttpProvider('https://mainnet.infura.io/v3/af2411a62c1f4aa8bc806874c7501c03', httpOptions));
+web3 = new Web3(new HttpProvider('https://mainnet.infura.io/v3/YOUR_INFURA_ID', httpOptions));
 
-const block = await web3.eth.getBlockNumber();
+block = await web3.eth.getBlockNumber();
 
 console.log(block);
