@@ -1,0 +1,13 @@
+{
+  "name": "web3.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "dependencies": {
+    "web3": "^4.4.0",
+    "web3-providers-ipc": "^4.0.7"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
