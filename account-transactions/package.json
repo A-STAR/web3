@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "node": "npx hardhat node",
-    "transaction-receipt": "node transaction-receipt.js"
+    "transaction-receipt": "node transaction-receipt.js",
+    "transaction-events": "node transaction-events.js"
   },
   "dependencies": {
     "hardhat": "^2.22.18",
