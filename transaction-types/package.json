@@ -1,0 +1,15 @@
+{
+  "name": "transaction-types",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "legacy-transaction": "npx tsx legacy-raw-transaction.ts",
+    "legacy-transaction-erc": "npx tsx legacy-transaction-erc-interaction.ts"
+  },
+  "dependencies": {
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
