@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "legacy-transaction": "npx tsx legacy-raw-transaction.ts",
-    "legacy-transaction-erc": "npx tsx legacy-transaction-erc-interaction.ts"
+    "legacy-transaction-erc": "npx tsx legacy-transaction-erc-interaction.ts",
+    "eip2930-transaction": "npx tsx eip2930-transaction.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
