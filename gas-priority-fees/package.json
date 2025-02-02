@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "estimate-gas": "npx tsx estimating-gas.ts"
+    "estimate-gas": "npx tsx estimating-gas.ts",
+    "calculate-fees": "npx tsx calculating-fees.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
