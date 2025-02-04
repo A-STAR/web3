@@ -5,7 +5,8 @@
   "scripts": {
     "estimate-gas": "npx tsx estimating-gas.ts",
     "calculate-fees": "npx tsx calculating-fees.ts",
-    "generate-access-list": "npx tsx generating-access-list.ts"
+    "generate-access-list": "npx tsx generating-access-list.ts",
+    "smart-contract-fees": "npx tsx smart-contract-fees.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
