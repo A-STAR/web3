@@ -3,9 +3,16 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "compile": "node compile.js"
+    "start": "node index.js",
+    "compile": "node compile.js",
+    "node": "npx hardhat node"
   },
   "dependencies": {
-    "solc": "^0.8.28"
+    "hardhat": "^2.22.18",
+    "solc": "^0.8.28",
+    "web3": "^4.16.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
   }
 }
