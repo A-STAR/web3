@@ -6,7 +6,8 @@
     "start": "node index.js",
     "compile": "node compile.js",
     "node": "npx hardhat node",
-    "deploy": "node deploy.js"
+    "deploy": "node deploy.js",
+    "interact": "node interact.js"
   },
   "dependencies": {
     "hardhat": "^2.22.18",
