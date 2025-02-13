@@ -12,7 +12,12 @@
 		<p id="provider"></p>
 		<p id="chain-id"></p>
 		<p id="latest-block"></p>
+		<p id="connected-account"></p>
 		<p id="warn" style="color: red"></p>
+
+    <div>
+			<button id="request-accounts">Request MetaMask Accounts</button>
+		</div>
 
 		<script type="module">
 			// ensure that there is an injected the Ethereum provider
@@ -45,10 +50,25 @@
 						'latest-block',
 					).innerText = `Latest Block: ${block.number}`;
 				});
+
+        // click event for "Request MetaMask Accounts" button
+				document.getElementById('request-accounts').addEventListener('click', async () => {
+					// request accounts from MetaMask
+					await window.ethereum.request({ method: 'eth_requestAccounts' });
+					document.getElementById('request-accounts').remove();
+
+					// get list of accounts
+					const accounts = await web3.eth.getAccounts();
+					// get the first account and populate placeholder
+					document.getElementById(
+						'connected-account',
+					).innerText = `Account: ${accounts[0]}`;
+				});
 			} else {
 				// no Ethereum provider - instruct user to install MetaMask
 				document.getElementById('warn').innerHTML =
 					"Please <a href='https://metamask.io/download/'>install MetaMask</a>.";
+        document.getElementById('requestAccounts').disabled = true;
 			}
 		</script>
 	</body>
