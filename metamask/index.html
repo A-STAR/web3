@@ -25,6 +25,13 @@
 			<p id="signing-result"></p>
 		</form>
 
+    <form onsubmit="event.preventDefault(); return false">
+			<input id="original-message" placeholder="Original Message" disabled>
+			<input id="signed-message" placeholder="Signed Message" disabled>
+			<button id="recover-account" disabled>Recover Account</button>
+			<p id="signing-account"></p>
+		</form>
+
 		<script type="module">
 			// ensure that there is an injected the Ethereum provider
 			if (window.ethereum) {
@@ -89,6 +96,28 @@
 						document.getElementById(
 							'signing-result'
 						).innerText = `Signed Message: ${signature}`;
+					});
+
+          // enable signature verification input
+					const originalMessage = document.getElementById('original-message');
+					const signedMessage = document.getElementById('signed-message');
+					const recoverAccount = document.getElementById('recover-account');
+					originalMessage.disabled = false;
+					signedMessage.disabled = false;
+					recoverAccount.disabled = false;
+
+					// click event for "Recover Account" button
+					recoverAccount.addEventListener('click', async () => {
+						// recover account from signature
+						const account = await web3.eth.personal.ecRecover(
+							originalMessage.value,
+							signedMessage.value
+						);
+
+						// update placeholder with recovered signature account
+						document.getElementById(
+							'signing-account',
+						).innerText = `Signing Account: ${account}`;
 					});
 				});
 			} else {
