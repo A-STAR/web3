@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { type EIP6963ProviderDetail, Web3 } from 'web3';
 
+import TransferForm from './TransferForm';
 import { useProviders } from './useProviders';
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
 							<div key={address}>
 								<div>Account: {address}</div>
 								<div>Balance: {`${balances.get(address)}`}</div>
+								<TransferForm address={address} web3={web3}></TransferForm>
 								{ndx !== accounts.length - 1 ? <br /> : null}
 							</div>
 						);
