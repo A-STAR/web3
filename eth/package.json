@@ -5,7 +5,9 @@
   "scripts": {
     "start": "npx tsx index.ts",
     "transaction": "npx tsx transaction.ts",
-    "estimate": "npx tsx estimate.ts"
+    "estimate": "npx tsx estimate.ts",
+    "sign": "npx tsx sign.ts",
+    "standalone": "npx tsx standalone.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
