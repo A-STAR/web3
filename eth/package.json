@@ -7,7 +7,8 @@
     "transaction": "npx tsx transaction.ts",
     "estimate": "npx tsx estimate.ts",
     "sign": "npx tsx sign.ts",
-    "standalone": "npx tsx standalone.ts"
+    "standalone": "npx tsx standalone.ts",
+    "legacy": "npx tsx legacy.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
