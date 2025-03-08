@@ -8,7 +8,8 @@
     "estimate": "npx tsx estimate.ts",
     "sign": "npx tsx sign.ts",
     "standalone": "npx tsx standalone.ts",
-    "legacy": "npx tsx legacy.ts"
+    "legacy": "npx tsx legacy.ts",
+    "EIP-2930": "npx tsx EIP-2930.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"
