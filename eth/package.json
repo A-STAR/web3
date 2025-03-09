@@ -9,7 +9,8 @@
     "sign": "npx tsx sign.ts",
     "standalone": "npx tsx standalone.ts",
     "legacy": "npx tsx legacy.ts",
-    "EIP-2930": "npx tsx EIP-2930.ts"
+    "EIP-2930": "npx tsx EIP-2930.ts",
+    "EIP-1559": "npx tsx EIP-1559.ts"
   },
   "dependencies": {
     "web3": "^4.16.0"

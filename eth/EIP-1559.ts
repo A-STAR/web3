@@ -15,8 +15,8 @@ async function test() {
 		value: '0x1',
 		gasLimit: BigInt(21000),
 		type: BigInt(2), // <- specify type
-		// maxFeePerGas - you can specify this property directly or web3js will fill this field automatically
-		// maxPriorityFeePerGas - you can specify this property directly or web3js will fill this field automatically
+		// maxFeePerGas - you can specify this property directly or `web3.js` will fill this field automatically
+		// maxPriorityFeePerGas - you can specify this property directly or `web3.js` will fill this field automatically
 	};
 
 	// send transaction
